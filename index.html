@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECE Lab Inventory</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Todo List</h1>
+            <p>Manage your Task with js OPPs logic</p>
+        </header>
+
+        <div class="dashboard-grid">
+
+            <main class="main-content">
+
+                <section class="form-section">
+                    <form id="inventory-form">
+                        <input type="text" id="comp-name" placeholder="Task Name (e.g. Reading)" required>
+                        <select id="comp-type" required >
+                            <option >Select Priority</option>
+
+                            <option value="high">high</option>
+                            <option value="low">low</option>
+                            <option value="medium">medium</option>
+                        </select>
+                        <input type="number" id="comp-qty" placeholder="time required in min e.g. 45" min="0" required>
+                        <button type="submit" id="add-btn">Add to task</button>
+                    </form>
+                </section>
+
+                <section class="display-section">
+                    <div class="table-header">
+                        <span>Task</span>
+                        <span>Priority</span>
+                        <span>Time Required(min)</span>
+                        <span>Action</span>
+                    </div>
+
+                    <div id="inventory-list"></div>
+
+                </section>
+            </main>
+
+            <aside class="widgets">
+                <div class="widget-card" id="clock-widget">
+                    <h3 id="live-time">00:00:00</h3>
+                    <p id="live-date">Sunday, 1 Feb 2026</p>
+                </div>
+                <div class="widget-card" id="weather-widget">
+                    <h3>🌍 Dynamic Weather</h3>
+                    <div class="weather-controls">
+                        <input type="text" id="city-input" placeholder="Enter City (e.g. Delhi)">
+                        <button id="search-weather-btn">Check</button>
+                    </div>
+                    <div id="weather-data">Loading weather...</div>
+                </div>
+                <div class="widget-card" id="quote-widget">
+                    <h3>💡 Daily Tech Fact</h3>
+                    <div id="quote-data">Fetching wisdom...</div>
+                    <button id="search-queto-btn">Check</button>
+                </div>
+
+            </aside>
+
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

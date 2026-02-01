@@ -1,0 +1,248 @@
+
+/* ...  */
+:root {
+    --primary: #00f2fe;
+    --secondary: #4facfe;
+    --bg: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    min-height: 100vh;
+     display: flex; 
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+
+}
+.form-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+}
+form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+
+input, select, button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1e293b;
+    color: white;
+}
+
+button {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+button:hover {
+    transform: scale(1.05);
+}
+.display-section {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.table-header, .item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.table-header {
+    font-weight: bold;
+    background: rgba(255,255,255,0.1);
+}
+
+.del-btn {
+    background: #ff4b2b;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}  
+
+
+
+
+/* Base Styling */
+:root {
+    --primary: #00f2fe;
+    --secondary: #4facfe;
+    --accent: #f0ab3d;
+    --bg: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    color: #f8fafc;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 🏁 Dashboard Grid Setup */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 70% Main, 30% Sidebar */
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Mobile Responsive: Single Column on small screens */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 📋 Main Section Styling */
+.form-section, .display-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 25px;
+}
+
+/* 🌡️ Widget Sidebar Styling */
+.widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget-card {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid var(--glass);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.widget-card h3 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--glass);
+    padding-bottom: 8px;
+}
+
+/* Weather Specifics */
+#weather-data {
+    text-align: center;
+}
+
+.temp {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.wind {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Quote Specifics */
+#quote-data p {
+    font-style: italic;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+#quote-data small {
+    display: block;
+    margin-top: 10px;
+    color: var(--secondary);
+    text-align: right;
+}
+
+/* Table Design Update */
+.item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 12px;
+    transition: background 0.3s;
+}
+
+.item-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.del-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+input, select, button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #1e293b;
+    color: white;
+}
+button {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+button:hover {
+    transform: scale(1.05);
+}
+.display-section {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+.weather-controls{
+    display:flex;
+    justify-content:space-around;
+    margin:10px;
+}
